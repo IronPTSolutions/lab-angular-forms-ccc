@@ -1,0 +1,11 @@
+<div class="user">
+  <img [src]="user?.avatar" class="user-img">
+  <div class="user-info">
+    <p><strong>Name:</strong> {{ user?.name }}</p>
+    <p><strong>Email:</strong> {{ user?.email}}</p>
+    <p><strong>Birthday:</strong> {{ user?.birthday | date:'dd-MM-yyyy' }}</p>
+  </div>
+  <div class="user-actions">
+    <button (click)="onClickDelete()">x</button>
+  </div>
+</div>
