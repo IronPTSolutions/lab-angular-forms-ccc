@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UserItemComponent } from './components/user/user-item/user-item.component';
+import { UserListComponent } from './components/user/user-list/user-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserItemComponent
+    UserItemComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
