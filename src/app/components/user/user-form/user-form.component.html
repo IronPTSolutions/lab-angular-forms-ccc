@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit(registerUserForm)" #registerUserForm="ngForm">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" name="name" [(ngModel)]="user.name" #name="ngModel" required minlength="3">
+    <ul *ngIf="name.errors && name.touched">
+      <li *ngIf="name.errors.required">Name is required</li>
+      <li *ngIf="name.errors.minlength">At least 3 chars</li>
+    </ul>
+  </div> 
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" name="email" [(ngModel)]="user.email" #email="ngModel" required email>
+    <ul *ngIf="email.errors && email.touched">
+      <li *ngIf="email.errors.required">Email is required</li>
+      <li *ngIf="email.errors.email">Invalid email format</li>
+    </ul>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required pattern="^.*(?=.{6,})(?=.*[a-zA-Z])(?=.*\d).*$">
+    <ul *ngIf="password.errors && password.touched">
+      <li *ngIf="password.errors.required">Password is required</li>
+      <li *ngIf="password.errors.pattern">Min length is 6</li>
+    </ul>
+  </div>
+  <div class="form-group">
+    <label for="birthday">Birthday:</label>
+    <input type="date" name="birthday" [(ngModel)]="user.birthday" placeholder="MM-DD-YYYY" #birthday required>
+  </div>
+  <button type="submit" [disabled]="!registerUserForm.valid">Add User</button>
+</form>

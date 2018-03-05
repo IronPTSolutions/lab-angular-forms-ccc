@@ -9,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class UserListComponent {
   users: Array<User> = [];
 
+  onCreateUser(user) {
+    this.users.push(user);
+  }
+
   onDeleteUser(email) {
     this.users = this.users.filter(u => u.email !== email);
   }

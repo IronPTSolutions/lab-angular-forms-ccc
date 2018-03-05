@@ -1,3 +1,4 @@
+<app-user-form (onCreate)="onCreateUser($event)"></app-user-form>
 <ul>
   <li *ngFor="let user of users">
     <app-user-item [user]="user" (onDelete)="onDeleteUser($event)"></app-user-item>
