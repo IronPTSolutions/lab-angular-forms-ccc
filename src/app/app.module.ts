@@ -7,6 +7,7 @@ import { UserItemComponent } from './components/user/user-item/user-item.compone
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserFormComponent } from './components/user/user-form/user-form.component';
 import { DateDirective } from './shared/validators/date.directive';
+import { UserFilterPipe } from './shared/pipes/user-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DateDirective } from './shared/validators/date.directive';
     UserItemComponent,
     UserListComponent,
     UserFormComponent,
-    DateDirective
+    DateDirective,
+    UserFilterPipe,
   ],
   imports: [
     BrowserModule,
