@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { UserItemComponent } from './components/user/user-item/user-item.component';
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserFormComponent } from './components/user/user-form/user-form.component';
+import { DateDirective } from './shared/validators/date.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserItemComponent,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    DateDirective
   ],
   imports: [
     BrowserModule,
